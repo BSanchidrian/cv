@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -5,9 +6,9 @@ import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import { SocialButton } from "@/components/social-button";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -36,41 +37,23 @@ export default function Page() {
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
-                  </a>
-                </Button>
+                <SocialButton
+                  href={`mailto:${RESUME_DATA.contact.email}`}
+                  Icon={MailIcon}
+                />
               ) : null}
               {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
+                <SocialButton
+                  href={`tel:${RESUME_DATA.contact.tel}`}
+                  Icon={PhoneIcon}
+                />
               ) : null}
               {RESUME_DATA.contact.social.map((social) => (
-                <Button
+                <SocialButton
                   key={social.name}
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={social.url}>
-                    <social.icon className="size-4" />
-                  </a>
-                </Button>
+                  href={social.url}
+                  Icon={social.icon}
+                />
               ))}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
@@ -84,6 +67,16 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
+              {RESUME_DATA.contact.social.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  className="flex flex-row gap-x-1"
+                >
+                  <social.icon className="size-4" />
+                  <span className="underline">{social.url}</span>
+                </a>
+              ))}
             </div>
           </div>
 
@@ -131,8 +124,19 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
+                <CardContent className="mt-2 text-sm">
+                  <ReactMarkdown
+                    components={{
+                      ul: ({ node, ...props }) => (
+                        <ul className="list-inside" {...props} />
+                      ),
+                      li: ({ node, ...props }) => (
+                        <li className="list-disc" {...props} />
+                      ),
+                    }}
+                  >
+                    {work.description}
+                  </ReactMarkdown>
                 </CardContent>
               </Card>
             );
