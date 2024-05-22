@@ -128,7 +128,7 @@ export default function Page() {
                   <ReactMarkdown
                     components={{
                       ul: ({ node, ...props }) => (
-                        <ul className="list-inside" {...props} />
+                        <ul className="list-inside space-y-4" {...props} />
                       ),
                       li: ({ node, ...props }) => (
                         <li className="list-disc" {...props} />
