@@ -24,11 +24,10 @@ export const RESUME_DATA = {
   initials: "BS",
   location: "Madrid, Spain, CET",
   locationLink: "https://www.google.com/maps/place/Madrid",
-  about: "Idk ¯_(ツ)_/¯",
-  summary: "Idk ¯_(ツ)_/¯",
-  // avatarUrl: "https://avatars.githubusercontent.com/u/25932251?v=4",
-  avatarUrl:
-    "https://media.licdn.com/dms/image/D4D03AQFWXuxmVnysYw/profile-displayphoto-shrink_200_200/0/1664916040685?e=1721865600&v=beta&t=5FW6qWcTtaweMl6RCiFYVoHRiZnFmzSnlVNoIqkaryA",
+  about: "Lead Software Engineer | Building Backends for Games",
+  summary:
+    "Software Engineer who's genuinely passionate about tech and loves to keep learning. I enjoy diving into various areas, mastering new programming languages, learning new architectural patterns, and tinkering with my home server",
+  avatarUrl: "https://avatars.githubusercontent.com/u/25932251?v=4",
   personalWebsiteUrl: "https://cv.borjas.dev",
   contact: {
     email: "b.sanchidrianmonge@gmail.com",
@@ -44,19 +43,25 @@ export const RESUME_DATA = {
         url: "https://www.linkedin.com/in/borja-sanchidrian/",
         icon: LinkedInIcon,
       },
-      // {
-      //   name: "X",
-      //   url: "https://x.com/BartoszJarocki",
-      //   icon: XIcon,
-      // },
+      {
+        name: "X",
+        url: "https://x.com/borjasanchidria",
+        icon: XIcon,
+      },
     ],
   },
   education: [
     {
       school: "U-TAD",
-      degree: "Example...",
-      start: "2007",
-      end: "2010",
+      degree: "Software Engineering",
+      start: "2015",
+      end: "2019",
+    },
+    {
+      school: "Alcalá University",
+      degree: "Systems Engineering",
+      start: "2014",
+      end: "2015",
     },
   ],
   work: [
@@ -64,47 +69,47 @@ export const RESUME_DATA = {
       company: "Scopely",
       link: "https://scopely.com",
       badges: ["Remote"],
-      title: "Lead Server Engineer",
+      title: "Senior Server Engineer → Lead Server Engineer",
       logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description:
-        "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+      start: "July 2021",
+      end: "Now",
+      description: `
+  - **High-Performance Game Development:** Developed server-side features and APIs for games with millions of daily active users, maintaining a remarkable uptime of 99.9% and achieving low latency (under 100 and 50 milliseconds).
+  - **AWS Infrastructure Management:** Effectively managed and monitored AWS infrastructure supporting our services, ensuring seamless operation and scalability.
+  - **New Feature Development and Tech Debt:** In-depth analysis of the existing codebase, devising precise implementation plans for introducing new features, improving code quality, and ensuring future scalability.
+  - **Database Optimization:** Optimized database performance and resource utilization, implementing tailored strategies that improved efficiency and responsiveness.
+  - **Led initiatives** to optimize automation, development, and deployment tools, streamlining processes for building and deploying in complex multi-environment setups.
+  `,
     },
-    // {
-    //   company: "Clevertech",
-    //   link: "https://clevertech.biz",
-    //   badges: ["Remote"],
-    //   title: "Lead Android Developer → Full Stack Developer",
-    //   logo: ClevertechLogo,
-    //   start: "2015",
-    //   end: "2021",
-    //   description:
-    //     "Created Android mobile apps and led teams for companies like Vision Media, DKMS, or AAA. Built live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
-    // },
-    // {
-    //   company: "Jojo Mobile",
-    //   link: "https://bsgroup.eu/",
-    //   badges: [],
-    //   title: "Android Developer → Lead Android Developer",
-    //   logo: JojoMobileLogo,
-    //   start: "2012",
-    //   end: "2015",
-    //   description:
-    //     "Built an Android team, created Android apps for biggest Polish companies like LOT, Polskie Radio, Agora, PolskaPress",
-    // },
-    // {
-    //   company: "Nokia Siemens Networks",
-    //   link: "https://www.nokia.com",
-    //   badges: [],
-    //   title: "C/C++ Developer",
-    //   logo: NSNLogo,
-    //   start: "2010",
-    //   end: "2012",
-    //   description: "Creating and testing software for LTE base stations",
-    // },
+    {
+      company: "Payvision",
+      link: "https://payvision.com",
+      badges: [],
+      title: "Software Engineer",
+      logo: ClevertechLogo,
+      start: "July 2019",
+      end: "July 2021",
+      description: `
+  - **New Feature Development:** Played a pivotal role in the development of new features, contributing to the expansion and functionality of the payment gateway.
+  - **Production Monitoring:** Actively monitored the production environment, ensuring optimal system performance and identifying and resolving issues proactively.
+  - **Incident Management:** Effectively managed incidents, addressing any technical glitches or service interruptions to minimize downtime and maintain service reliability.
+  - **CI/CD:** Designed and implemented efficient build and deploy pipelines in Azure DevOps, streamlining the development workflow and ensuring seamless releases.
+  - **High Availability and Scalability:** Collaborated with the team to design, deliver, and operate the system in a high-availability and scalable production environment, ensuring uninterrupted service for customers.
+  `,
+    },
+    {
+      company: "Airbus - Aerospace and defense",
+      link: "https://airbus.com/",
+      badges: [],
+      title: "Junior Software Engineer",
+      logo: JojoMobileLogo,
+      start: "October 2017",
+      end: "July 2019",
+      description:
+        ".NET, Python and C++ development at the Aeronautics, Space & Defense department for Airbus",
+    },
   ],
-  skills: ["Idk"],
+  skills: ["Idk", "None?"],
   projects: [
     {
       title: "Example",
@@ -116,11 +121,11 @@ export const RESUME_DATA = {
         "GraphQL",
         "WebRTC",
       ],
-      description: "A platform to build and grow your online business",
+      description: "A cool example :D",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "google.com",
+        href: "https://google.com/",
       },
     },
     {
@@ -133,11 +138,11 @@ export const RESUME_DATA = {
         "GraphQL",
         "WebRTC",
       ],
-      description: "A platform to build and grow your online business",
+      description: "A cool example :D",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "google.com",
+        href: "https://google.com/",
       },
     },
     {
@@ -150,11 +155,11 @@ export const RESUME_DATA = {
         "GraphQL",
         "WebRTC",
       ],
-      description: "A platform to build and grow your online business",
+      description: "A cool example :D",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "google.com",
+        href: "https://google.com/",
       },
     },
     {
@@ -167,11 +172,11 @@ export const RESUME_DATA = {
         "GraphQL",
         "WebRTC",
       ],
-      description: "A platform to build and grow your online business",
+      description: "A cool example :D",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "google.com",
+        href: "https://google.com/",
       },
     },
     {
@@ -184,11 +189,11 @@ export const RESUME_DATA = {
         "GraphQL",
         "WebRTC",
       ],
-      description: "A platform to build and grow your online business",
+      description: "A cool example :D",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "google.com",
+        href: "https://google.com/",
       },
     },
     // {
@@ -201,11 +206,11 @@ export const RESUME_DATA = {
     //     "GraphQL",
     //     "WebRTC",
     //   ],
-    //   description: "A platform to build and grow your online business",
+    //   description: "A cool example :D",
     //   logo: ConsultlyLogo,
     //   link: {
-    //     label: "consultly.com",
-    //     href: "https://consultly.com/",
+    //     label: "google.com",
+    //     href: "https://google.com/",
     //   },
     // },
     // {
