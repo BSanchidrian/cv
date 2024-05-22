@@ -1,9 +1,9 @@
-import { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SVGProps } from "react";
 
 interface SocialButtonProps {
   href: string;
-  Icon: LucideIcon;
+  Icon: any;
 }
 
 export const SocialButton = ({ href, Icon }: SocialButtonProps) => {
