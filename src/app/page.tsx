@@ -58,25 +58,35 @@ export default function Page() {
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                <a
+                  href={`mailto:${RESUME_DATA.contact.email}`}
+                  className="flex flex-row gap-x-1"
+                >
+                  <MailIcon className="size-4" />
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
               {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                <a
+                  href={`tel:${RESUME_DATA.contact.tel}`}
+                  className="flex flex-row gap-x-1"
+                >
+                  <PhoneIcon className="size-4" />
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.social.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  className="flex flex-row gap-x-1"
-                >
-                  <social.icon className="size-4" />
-                  <span className="underline">{social.url}</span>
-                </a>
-              ))}
+              {RESUME_DATA.contact.social
+                .filter((social) => social.showInPrint)
+                .map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    className="flex flex-row gap-x-1"
+                  >
+                    <social.icon className="size-4" />
+                    <span className="underline">{social.url}</span>
+                  </a>
+                ))}
             </div>
           </div>
 
@@ -170,7 +180,14 @@ export default function Page() {
             })}
           </div>
         </Section>
-
+        <Section>
+          <h2 className="text-xl font-bold">Languages</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.languages.map((language) => {
+              return <Badge key={language}>{language}</Badge>;
+            })}
+          </div>
+        </Section>
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">

@@ -31,22 +31,25 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://cv.borjas.dev",
   contact: {
     email: "b.sanchidrianmonge@gmail.com",
-    tel: "+66666666",
+    tel: "+34653532170",
     social: [
       {
         name: "GitHub",
         url: "https://github.com/BSanchidrian",
         icon: GitHubIcon,
+        showInPrint: true,
       },
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/borja-sanchidrian/",
         icon: LinkedInIcon,
+        showInPrint: false,
       },
       {
         name: "X",
         url: "https://x.com/borjasanchidria",
         icon: XIcon,
+        showInPrint: false,
       },
     ],
   },
@@ -109,7 +112,16 @@ export const RESUME_DATA = {
         ".NET, Python and C++ development at the Aeronautics, Space & Defense department for Airbus",
     },
   ],
-  skills: ["Idk", "None?"],
+  skills: [
+    ".NET",
+    "AWS",
+    "C++",
+    "React",
+    "Terraform",
+    "CI/CD",
+    "Network Programming",
+  ],
+  languages: ["English", "Spanish"],
   projects: [
     {
       title: "Example",
